@@ -6,8 +6,8 @@ from app.todo import utils
 todo_bp = Blueprint('todo', __name__, url_prefix='/todos')
 
 
-@todo_bp.route('/get_todos', methods=['GET'])
-def get_all_todos():
+@todo_bp.route('/', methods=['GET'])
+def get_todos():
     todos = utils.get_all_todos()
     return {"data": todos}
 
